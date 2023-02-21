@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ФИО" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ФИОКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ФИОРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Телефон" id="10">
+			<DataPath>Объект.Телефон</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТелефонКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ДатаРождения" id="28">
+			<DataPath>Объект.ДатаРождения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="Паспорт" id="19">
+			<DataPath>Объект.Паспорт</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПаспортКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ПаспортРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="40">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="ИНН" id="13">
+					<DataPath>Объект.ИНН</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИННКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="СНИЛС" id="16">
+					<DataPath>Объект.СНИЛС</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СНИЛСКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СНИЛСРасширеннаяПодсказка" id="18"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="АдресПроживания" id="22">
+			<DataPath>Объект.АдресПроживания</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="АдресПроживанияКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="АдресПроживанияРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Должность" id="34">
+			<DataPath>Объект.Должность</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДолжностьКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="ВодительскийСтаж" id="31">
+			<DataPath>Объект.ВодительскийСтаж</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВодительскийСтажКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ВодительскийСтажРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="ДатаНачалаРаботы" id="37">
+			<DataPath>Объект.ДатаНачалаРаботы</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаНачалаРаботыКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ДатаНачалаРаботыРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="Оклад" id="25">
+			<DataPath>Объект.Оклад</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОкладКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ОкладРасширеннаяПодсказка" id="27"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Сотрудники</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

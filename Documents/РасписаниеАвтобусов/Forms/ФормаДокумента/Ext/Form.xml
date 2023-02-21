@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="Расписание" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Расписание</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РасписаниеКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="РасписаниеКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="РасписаниеРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="РасписаниеСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>Расписание</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасписаниеСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="РасписаниеСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РасписаниеСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>Расписание</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасписаниеСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="РасписаниеСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РасписаниеУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>Расписание</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РасписаниеУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="РасписаниеУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="РасписаниеНомерСтроки" id="20">
+					<DataPath>Объект.Расписание.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасписаниеНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="РасписаниеНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="РасписаниеВодитель" id="23">
+					<DataPath>Объект.Расписание.Водитель</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасписаниеВодительКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="РасписаниеВодительРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="РасписаниеКондуктор" id="26">
+					<DataPath>Объект.Расписание.Кондуктор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасписаниеКондукторКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="РасписаниеКондукторРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="РасписаниеЗанятость" id="47">
+					<DataPath>Объект.Расписание.Занятость</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасписаниеЗанятостьКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="РасписаниеЗанятостьРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="РасписаниеАвтобус" id="32">
+					<DataPath>Объект.Расписание.Автобус</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасписаниеАвтобусКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="РасписаниеАвтобусРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="РасписаниеНомерМаршрута" id="38">
+					<DataPath>Объект.Расписание.НомерМаршрута</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасписаниеНомерМаршрутаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="РасписаниеНомерМаршрутаРасширеннаяПодсказка" id="40"/>
+					<Events>
+						<Event name="OnChange">РасписаниеНомерМаршрутаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РасписаниеВремяВыезда" id="35">
+					<DataPath>Объект.Расписание.ВремяВыезда</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасписаниеВремяВыездаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="РасписаниеВремяВыездаРасширеннаяПодсказка" id="37"/>
+					<Events>
+						<Event name="OnChange">РасписаниеВремяВыездаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РасписаниеВремяПоездки" id="41">
+					<DataPath>Объект.Расписание.ВремяПоездки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасписаниеВремяПоездкиКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="РасписаниеВремяПоездкиРасширеннаяПодсказка" id="43"/>
+					<Events>
+						<Event name="OnChange">РасписаниеВремяПоездкиПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РасписаниеВремяПриезда" id="44">
+					<DataPath>Объект.Расписание.ВремяПриезда</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасписаниеВремяПриездаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="РасписаниеВремяПриездаРасширеннаяПодсказка" id="46"/>
+					<Events>
+						<Event name="OnChange">РасписаниеВремяПриездаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.РасписаниеАвтобусов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Транспорт" id="7">
+			<DataPath>Объект.Транспорт</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТранспортКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТранспортРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Пригодность" id="10">
+			<DataPath>Объект.Пригодность</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПригодностьКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПригодностьРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<CheckBoxField name="ВозможностьРемонта" id="22">
+			<DataPath>Объект.ВозможностьРемонта</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВозможностьРемонтаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ВозможностьРемонтаРасширеннаяПодсказка" id="24"/>
+		</CheckBoxField>
+		<InputField name="ПричинаПоломки" id="13">
+			<DataPath>Объект.ПричинаПоломки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПричинаПоломкиКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПричинаПоломкиРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ВремяУстранения" id="16">
+			<DataPath>Объект.ВремяУстранения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВремяУстраненияКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ВремяУстраненияРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="СтоимостьРемонта" id="19">
+			<DataPath>Объект.СтоимостьРемонта</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СтоимостьРемонтаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="СтоимостьРемонтаРасширеннаяПодсказка" id="21"/>
+			<Events>
+				<Event name="OnChange">ПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="СписокНоменклатуры" id="25">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СписокНоменклатуры</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокНоменклатурыКонтекстноеМеню" id="26"/>
+			<AutoCommandBar name="СписокНоменклатурыКоманднаяПанель" id="27"/>
+			<ExtendedTooltip name="СписокНоменклатурыРасширеннаяПодсказка" id="28"/>
+			<SearchStringAddition name="СписокНоменклатурыСтрокаПоиска" id="29">
+				<AdditionSource>
+					<Item>СписокНоменклатуры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокНоменклатурыСтрокаПоискаКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="СписокНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокНоменклатурыСостояниеПросмотра" id="32">
+				<AdditionSource>
+					<Item>СписокНоменклатуры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="СписокНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокНоменклатурыУправлениеПоиском" id="35">
+				<AdditionSource>
+					<Item>СписокНоменклатуры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокНоменклатурыУправлениеПоискомКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="СписокНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">ЗапчастиЦенаПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СписокНоменклатурыНомерСтроки" id="38">
+					<DataPath>Объект.СписокНоменклатуры.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНоменклатурыНомерСтрокиКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СписокНоменклатурыНомерСтрокиРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<InputField name="СписокНоменклатурыНоменклатура" id="41">
+					<DataPath>Объект.СписокНоменклатуры.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНоменклатурыНоменклатураКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="СписокНоменклатурыНоменклатураРасширеннаяПодсказка" id="43"/>
+					<Events>
+						<Event name="OnChange">СписокНоменклатурыНоменклатураПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СписокНоменклатурыЦена" id="44">
+					<DataPath>Объект.СписокНоменклатуры.Цена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНоменклатурыЦенаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="СписокНоменклатурыЦенаРасширеннаяПодсказка" id="46"/>
+					<Events>
+						<Event name="OnChange">СписокНоменклатурыЦенаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СписокНоменклатурыКоличество" id="47">
+					<DataPath>Объект.СписокНоменклатуры.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНоменклатурыКоличествоКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="СписокНоменклатурыКоличествоРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">СписокНоменклатурыКоличествоПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СписокНоменклатурыСумма" id="50">
+					<DataPath>Объект.СписокНоменклатуры.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНоменклатурыСуммаКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="СписокНоменклатурыСуммаРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="OnChange">СписокНоменклатурыСуммаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Ремонт</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

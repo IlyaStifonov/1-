@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ТипДокумента" id="57">
+			<DataPath>Объект.ТипДокумента</DataPath>
+			<ContextMenu name="ТипДокументаКонтекстноеМеню" id="58"/>
+			<ExtendedTooltip name="ТипДокументаРасширеннаяПодсказка" id="59"/>
+			<Events>
+				<Event name="OnChange">ТипДокументаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Сотрудник" id="7">
+			<DataPath>Объект.Сотрудник</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СотрудникКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">СотрудникПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Должность" id="21">
+			<DataPath>Объект.Должность</DataPath>
+			<ContextMenu name="ДолжностьКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="23"/>
+		</InputField>
+		<UsualGroup name="ТрудовойДоговор" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трудовой договор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трудовой договор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ТрудовойДоговорРасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<InputField name="ДатаПриема" id="24">
+					<DataPath>Объект.ДатаПриема</DataPath>
+					<ContextMenu name="ДатаПриемаКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ДатаПриемаРасширеннаяПодсказка" id="26"/>
+					<Events>
+						<Event name="OnChange">ДатаПриемаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Оклад" id="42">
+					<DataPath>Объект.Оклад</DataPath>
+					<ContextMenu name="ОкладКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ОкладРасширеннаяПодсказка" id="44"/>
+				</InputField>
+				<InputField name="Директор" id="15">
+					<DataPath>Объект.Директор</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ДиректорКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ДиректорРасширеннаяПодсказка" id="17"/>
+				</InputField>
+				<InputField name="НаименованиеОрганизации" id="18">
+					<DataPath>Объект.НаименованиеОрганизации</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="НаименованиеОрганизацииКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="НаименованиеОрганизацииРасширеннаяПодсказка" id="20"/>
+				</InputField>
+				<InputField name="ЮридическийАдресОрганизации" id="27">
+					<DataPath>Объект.ЮридическийАдресОрганизации</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ЮридическийАдресОрганизацииКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ЮридическийАдресОрганизацииРасширеннаяПодсказка" id="29"/>
+				</InputField>
+				<UsualGroup name="Группа2" id="64">
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<InputField name="КПП" id="48">
+							<DataPath>Объект.КПП</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="КППКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="КППРасширеннаяПодсказка" id="50"/>
+						</InputField>
+						<InputField name="ИНН" id="45">
+							<DataPath>Объект.ИНН</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="ИННКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="47"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа1" id="62">
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="63"/>
+					<ChildItems>
+						<InputField name="Серия" id="30">
+							<DataPath>Объект.Серия</DataPath>
+							<ContextMenu name="СерияКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="СерияРасширеннаяПодсказка" id="32"/>
+						</InputField>
+						<InputField name="НомерПаспорт" id="33">
+							<DataPath>Объект.НомерПаспорт</DataPath>
+							<ContextMenu name="НомерПаспортКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="НомерПаспортРасширеннаяПодсказка" id="35"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="66">
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<InputField name="ДатаВыдачи" id="39">
+							<DataPath>Объект.ДатаВыдачи</DataPath>
+							<ContextMenu name="ДатаВыдачиКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ДатаВыдачиРасширеннаяПодсказка" id="41"/>
+						</InputField>
+						<InputField name="КемВыдан" id="36">
+							<DataPath>Объект.КемВыдан</DataPath>
+							<ContextMenu name="КемВыданКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="КемВыданРасширеннаяПодсказка" id="38"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="КодПодразделения" id="51">
+					<DataPath>Объект.КодПодразделения</DataPath>
+					<ContextMenu name="КодПодразделенияКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="КодПодразделенияРасширеннаяПодсказка" id="53"/>
+				</InputField>
+				<InputField name="АдресРегистрации" id="54">
+					<DataPath>Объект.АдресРегистрации</DataPath>
+					<ContextMenu name="АдресРегистрацииКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="АдресРегистрацииРасширеннаяПодсказка" id="56"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ДатаЗ" id="12">
+			<ContextMenu name="ДатаЗКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="ДатаЗРасширеннаяПодсказка" id="14"/>
+		</InputField>
+		<UsualGroup name="ЗаявлениеНаУвольнение" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление на увольнение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление на увольнение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ЗаявлениеНаУвольнениеРасширеннаяПодсказка" id="69"/>
+			<ChildItems>
+				<InputField name="ДатаУвольнения" id="70">
+					<DataPath>Объект.ДатаУвольнения</DataPath>
+					<ContextMenu name="ДатаУвольненияКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ДатаУвольненияРасширеннаяПодсказка" id="72"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ЗаявлениеНаОтпуск" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление на отпуск</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление на отпуск</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ЗаявлениеНаОтпускРасширеннаяПодсказка" id="74"/>
+			<ChildItems>
+				<InputField name="ДатаНачалаПодсчет" id="84">
+					<DataPath>Объект.ДатаНачалаПодсчет</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ДатаНачалаПодсчетКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ДатаНачалаПодсчетРасширеннаяПодсказка" id="86"/>
+				</InputField>
+				<InputField name="ДатаНачала" id="75">
+					<DataPath>Объект.ДатаНачала</DataPath>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="77"/>
+					<Events>
+						<Event name="OnChange">ДатаНачалаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КоличествоДней" id="81">
+					<DataPath>Объект.КоличествоДней</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="КоличествоДнейКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="КоличествоДнейРасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="ДатаОкончания" id="78">
+					<DataPath>Объект.ДатаОкончания</DataPath>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="80"/>
+					<Events>
+						<Event name="OnChange">ДатаОкончанияПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ЗаявлениеНаПереводНаДругуюДолжность" id="87">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление на перевод на другую должность</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление на перевод на другую должность</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ЗаявлениеНаПереводНаДругуюДолжностьРасширеннаяПодсказка" id="88"/>
+			<ChildItems>
+				<InputField name="ДолжностьДляПеревода" id="92">
+					<DataPath>Объект.ДолжностьДляПеревода</DataPath>
+					<ContextMenu name="ДолжностьДляПереводаКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="ДолжностьДляПереводаРасширеннаяПодсказка" id="94"/>
+				</InputField>
+				<InputField name="ДатаПеревода" id="89">
+					<DataPath>Объект.ДатаУвольнения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата перевода</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаПереводаКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="ДатаПереводаРасширеннаяПодсказка" id="91"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПриемНаРаботу</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>
